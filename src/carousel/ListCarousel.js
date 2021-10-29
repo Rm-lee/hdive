@@ -7,7 +7,10 @@ import "slick-carousel/slick/slick-theme.css";
 import "./listcarousel.css";
 
 function ListCarousel(props) {
+    console.log(props.content)
+    const seriesCatList = props.content.slice(0,15)
   function NextArrow(props) {
+
     const { className, style, onClick } = props;
     return (
       <div
@@ -63,7 +66,7 @@ function ListCarousel(props) {
   return (
     <div className="list-carousel">
       <Slider {...settings}>
-        {props.content.map((content) => (
+        {seriesCatList.map((content) => (
           <SeriesCard content={content} />
         ))}
       </Slider>
