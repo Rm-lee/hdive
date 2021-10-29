@@ -1,0 +1,8 @@
+.landing-main{
+    margin:0 auto;
+
+    width:95%;
+    max-width: 1140px;
+    min-height: 100vh;
+    background-color: #222325;
+}

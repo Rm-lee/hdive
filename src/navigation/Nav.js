@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import HidiveLogo from "../assets/HIDIVE_logo.svg";
 import "./nav.css";
+
 function Nav() {
   const [searchExpand, setSearchExpand] = useState(false);
   const closeSearch = () => {

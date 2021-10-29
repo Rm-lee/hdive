@@ -1,0 +1,62 @@
+.top-page-carousel{
+    margin:0 auto;
+    padding-top:70px;
+    max-height: 500px;
+    width:100%;
+}
+
+.styled-next-arrow{
+    background:transparent;
+    position: absolute;
+    margin:0;
+    color: transparent;
+    left:96%;
+    top:0;
+    width:30px;
+    height:100%;
+    z-index: 3;
+    
+}
+.styled-next-arrow svg{
+    color:white;
+    font-size:2.5rem;
+    position: relative;
+    top:50%;
+    cursor: pointer;
+    filter: drop-shadow(0px 1px 1px #000000);
+
+}
+
+.styled-prev-arrow{
+    background:transparent;
+    position: absolute;
+    margin:0;
+    color: transparent;
+    left:0;
+    top:0;
+    width:30px;
+    height:100%;
+    z-index: 3;
+}
+.styled-prev-arrow svg{
+    color:white;
+    font-size:2.5rem;
+    position: relative;
+    top:50%;
+    cursor: pointer;
+    filter: drop-shadow(0px 1px 1px #000000);
+   }
+
+   .slick-dots ul li.slick-active div {
+    margin-top:5px;
+    width: 15px;
+    height:4px;
+    background:aqua;
+   }
+   .slick-dots ul li div{
+    margin-top:5px;
+    width: 15px;
+    height:4px;
+    background: #777;
+
+   }
