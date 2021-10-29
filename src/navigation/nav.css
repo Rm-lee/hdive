@@ -1,5 +1,5 @@
 .nav{
-    background-color:rgba(0, 0, 0,.5);
+    background-color:rgba(0, 0, 0,.6);
     width:100%;
     min-height: 75px;
     display:flex;
@@ -9,14 +9,17 @@
 .nav-container{
     display:flex;
     flex-wrap:wrap;
-    max-width: 1200px;
+    justify-content: space-between;
+    width:100%;
+    max-width: 1100px;
     margin:0 auto;
+    padding-left: 10px;
 }
 .logo-navlist{
     display:flex;
 }
 .hidive-logo{
- width:125px;
+ width:135px;
  margin-right:10px;
 }
 .nav-items{
@@ -41,27 +44,90 @@
     justify-content: flex-end;
     flex-wrap: wrap;
     align-items: center;
-    width:25%;
     min-width:150px;
 
 }
 .profile-container li{
     list-style-type: none;
+    cursor: pointer;
     padding:0 10px;
 }
 li.trial-button{
+    caret-color: transparent;
+    text-shadow: 2px 2px #000;
     font-size:.7em;
     background-color:#ED008C;
     color:white;
     font-weight: bold;
     border-radius:3px;
     padding:4px 6px;
+    display: block;
 }
+
 .nav-icons{
-    font-size:1.5em;
+    caret-color: transparent;
+    position: relative;
+    font-size:1.3em;
+    z-index:2;
     color:white
 }
+div.searchbar{
+    width:100%;
+    display:flex;
+    align-items: center;
+    position:relative;
+    left:20%;
+    background-color:#222325;
+    border:1px solid #cdcdcd;
+    border-radius:5px;
+    padding:5px 2px;
+    transform:scale(0);
+    transform-origin: right;
+    display:none;
+    
+}
+
+div.searchbar.expanded{
+    display:block;
+    animation: expand .7s ease forwards;
+}
+div.retract{   
+    animation: retract .7s ease forwards;
+}
+
+
+@keyframes expand {
+    0% {
+      transform: scaleX(0);
+    }
+    100% {
+      transform: scaleX(1);
+    }
+  }
+  @keyframes retract {
+    0% {
+      transform: scaleX(1);
+    }
+    100% {
+      transform: scaleX(0);
+     
+    }
+  }
+
+
+
+
+
+div.searchbar input{
+    color:white;
+    outline: none;
+    border:none;
+    background-color:rgba(0,0,0,0)
+}
 @media only screen and (max-width: 900px) {
+    .nav-container{
+        width:100%;
+    }
     .profile-container {
     width:100%;
     margin:0 10px 5px;
