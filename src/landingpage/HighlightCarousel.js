@@ -1,9 +1,10 @@
 import React from 'react'
 import Carousel from '../carousel/Carousel'
  function HighlightCarousel(props) {
+     console.log(props.content)
      const highLightReel = props.content.TitleRows[0].Titles.slice(0,4)
     return (
-        <Carousel content={highLightReel} slidesToShow={1} slidesToScroll={1} />
+        <Carousel main={true} content={highLightReel} slidesToShow={1} slidesToScroll={1} />
     )
 }
 export default HighlightCarousel

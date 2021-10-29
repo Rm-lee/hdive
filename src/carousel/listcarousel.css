@@ -1,10 +1,10 @@
-.top-page-carousel{
+.list-carousel{
     margin:0 auto;
     max-height: 500px;
-    width:100%;
+    width:95%;
 }
 
-.styled-next-arrow{
+.list-carousel .styled-next-arrow{
     background:transparent;
     position: absolute;
     margin:0;
@@ -16,17 +16,17 @@
     z-index: 3;
     
 }
-.styled-next-arrow svg{
+.list-carousel .styled-next-arrow svg{
     color:white;
     font-size:2.5rem;
     position: relative;
-    top:50%;
+    top:15%;
     cursor: pointer;
     filter: drop-shadow(0px 1px 1px #000000);
 
 }
 
-.styled-prev-arrow{
+.list-carousel .styled-prev-arrow{
     background:transparent;
     position: absolute;
     margin:0;
@@ -37,25 +37,38 @@
     height:100%;
     z-index: 3;
 }
-.styled-prev-arrow svg{
+.list-carousel .styled-prev-arrow svg{
     color:white;
     font-size:2.5rem;
     position: relative;
-    top:50%;
+    top:15%;
     cursor: pointer;
     filter: drop-shadow(0px 1px 1px #000000);
    }
-
-   .slick-dots ul li.slick-active div {
+   .list-carousel .slick-dots{
+       width:200px;
+       position:absolute;
+       display:flex;
+       justify-content: flex-end;
+       top:-40%;
+       right:0;
+   }
+  .list-carousel .slick-dots ul li.slick-active div {
     margin-top:5px;
     width: 15px;
     height:4px;
-    background:aqua;
+    background:#00AEEF;
    }
-   .slick-dots ul li div{
-    margin-top:5px;
+   .list-carousel .slick-dots ul li div{
+       
     width: 15px;
     height:4px;
     background: #777;
 
    }
+.list-carousel div .slick-slide  .list-carousel-img{
+    border-radius: 5px;
+    width:95% !important;
+}
+.list-carousel div .slick-slide{
+}
