@@ -1,13 +1,12 @@
 import React from "react";
 import Slider from "react-slick";
-import SeriesCard from "./SeriesCard";
+import SeriesCard from "../cards/SeriesCard";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import "./listcarousel.css";
 
 function ListCarousel(props) {
-    console.log(props.content)
     const seriesCatList = props.content.slice(0,15)
   function NextArrow(props) {
 

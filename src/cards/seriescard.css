@@ -1,0 +1,110 @@
+.series-card {
+  position: relative;
+  height: 100px;
+}
+.series-card:hover {
+}
+.series-info {
+}
+.card-overlay {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: absolute;
+  opacity: 0;
+  width: 95%;
+  height: 100%;
+  background: rgb(0, 0, 0);
+  z-index: 2;
+  border-radius: 2px;
+}
+
+.play-icon {
+  transform-origin: center;
+  transform: translate(0, 30%);
+  color: white;
+  font-size: 2.5em;
+  opacity: .6;
+}
+.play-icon:hover{
+    color:#00AEEF;
+    cursor: pointer;
+}
+.chevron-down {
+  position: relative;
+  color: white;
+  font-size: 3rem;
+  cursor: pointer;
+  opacity: .6;
+  z-index: 3;
+}
+.chevron-down:hover{
+    opacity:.9;
+}
+.chevron-slide-down {
+  animation: chevronSlideDown 0.5s ease forwards;
+}
+
+.series-card-title {
+  position: absolute;
+  bottom: 0;
+  color: white;
+  font-size: 1rem;
+  text-align: center;
+  font-weight: bold;
+  padding-bottom:10%;
+}
+.list-carousel div .slick-slide .list-carousel-img {
+  z-index: 2;
+  border-radius: 2px;
+  width: 95% !important;
+}
+@keyframes chevronSlideDown {
+  0% {
+    top: 0;
+  }
+  100% {
+    top: 20%;
+  }
+}
+@media only screen and (max-width: 500px) {
+  .chevron-down {
+    font-size: 1rem;
+    z-index: 3;
+  }
+  .series-card-title {
+    font-size: 0.5rem;
+  }
+  .play-icon {
+    font-size: 1rem;
+  }
+  @keyframes chevronSlideDown {
+    0% {
+      top: 0;
+    }
+    100% {
+      top: 20%;
+    }
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  .chevron-down {
+    font-size: 1.5rem;
+    z-index: 3;
+  }
+  .series-card-title {
+    font-size: 0.7rem;
+  }
+  .play-icon {
+    font-size: 1.8rem;
+  }
+  @keyframes chevronSlideDown {
+    0% {
+      top: 0;
+    }
+    100% {
+      top: 20%;
+    }
+  }
+}

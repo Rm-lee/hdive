@@ -33,7 +33,10 @@ function Carousel(props) {
   const settings = {
     dots: true,
     infinite: true,
+    autoplay: true,
     speed: 500,
+    autoplaySpeed: 4000,
+    cssEase: "linear",
     slidesToShow: props.slidesToShow,
     slidesToScroll: props.slidesToScroll,
     nextArrow: <NextArrow />,
