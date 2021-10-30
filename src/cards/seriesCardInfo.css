@@ -1,0 +1,105 @@
+.details-container{
+  
+}
+
+.series-card-info {
+  width: 99%;
+  height: 320px;
+  display: flex;
+  margin-top: 15px;
+  background-size: contain;
+  background-repeat: no-repeat;  
+  color: white;}
+.details {
+  width: 70%;
+}
+.series-title {
+  color: #00aeef;
+  font-size: 2.5rem;
+  padding: 15px 0  0 10px;
+}
+.info-overlay { 
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  background: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 1),
+    80%,
+    rgba(0, 0, 0, 0.4),
+    90%,
+    rgba(0, 0, 0, 0.1)
+  );
+  position: absolute;
+  width: 90%;
+  max-width: 1070px;
+  z-index: 1;
+  height: 320px;
+}
+.season {
+  font-size: 1.5rem;
+  color: #969696;
+  padding: 15px 0 0 10px;
+}
+.ratings{
+    padding:10px 0 0 10px;
+}
+.ratings .ui.star.rating i{
+   color:#cdcdcd;
+   text-shadow: none !important;
+
+}
+.ratings .ui.star.rating .active.icon{
+    color:#00AEEF !important;
+    text-shadow: none !important;
+ }
+.synopsis {
+  padding:5px 0 0 10px;
+  font-size: 14px;
+  width: 50%;
+}
+.premiere{
+    padding:0 0 0 10px;
+}
+.series-img{
+    border-radius:5px;
+
+}
+.series-buttons{
+    padding:5px 0 0 10px;
+}
+.details-bottom-buttons{
+    background: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 1),
+    80%,
+    rgba(0, 0, 0, 0.05),
+    100%,
+    rgba(0, 0, 0, 0)
+  );
+    display:flex;
+    justify-content: space-around;
+    align-items: flex-end;
+    color:white;
+    margin: -28px 0 10px;
+    width:99%;
+    z-index: 2;
+    position:relative;
+    height:60px;
+    border-radius: 5px;
+
+}
+.bottom-buttons{
+    border-bottom:none;
+    height:30px;
+    margin-bottom:5px;
+    cursor: pointer;
+}
+.bottom-buttons:hover{
+    border-bottom:5px solid #F78E1E;
+
+}
+.bottom-buttons.active{
+    border-bottom:5px solid #F78E1E;
+
+}

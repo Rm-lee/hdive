@@ -8,10 +8,10 @@ function LandingPage() {
         <div className="landing-main">
             <HighlightCarousel content={data} />
             
-            {data.TitleRows.map(content => (
+            {data.TitleRows.map((content,i) => (
                 <div>
                     <h2 style={{color:"#969696"}}>{content.Name}</h2>
-                      <ListCarousel content={content.Titles} slidesToShow={5} slidesToScroll={5} />
+                      <ListCarousel key={i} id={i} content={content.Titles} slidesToShow={5} slidesToScroll={5} />
 
                 </div>
             ))}

@@ -1,13 +1,17 @@
-import React from "react";
+import React,{useState} from "react";
 import Slider from "react-slick";
 import SeriesCard from "../cards/SeriesCard";
+import SeriesInfo from "../cards/SeriesInfo";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import "./listcarousel.css";
 
 function ListCarousel(props) {
-    const seriesCatList = props.content.slice(0,15)
+  const seriesCatList = props.content.slice(0,15)
+  const [seriesInfo,updateSeriesInfo] = useState()
+  const [showInfor,setShowInfo]=useState(false)
+
   function NextArrow(props) {
 
     const { className, style, onClick } = props;
@@ -66,9 +70,11 @@ function ListCarousel(props) {
     <div className="list-carousel">
       <Slider {...settings}>
         {seriesCatList.map((content) => (
-          <SeriesCard content={content} />
+          <SeriesCard  showInfo={showInfor} setShowInfo={setShowInfo}updateSeriesInfo={updateSeriesInfo}content={content} />
         ))}
       </Slider>
+      {seriesInfo && 
+      <SeriesInfo showInfo={showInfor} setShowInfo={setShowInfo} content={seriesInfo} /> }
     </div>
   );
 }
