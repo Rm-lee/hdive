@@ -27,7 +27,7 @@ function Nav() {
       <div className="nav-container">
         <div className="logo-navlist">
           <ul className="nav-items">
-            <img className="hidive-logo" src={HidiveLogo} alt="hidive logo" />
+            <a href="target _blank"><img className="hidive-logo" src={HidiveLogo} alt="hidive logo" /></a>
             <li>SIMULCASTS</li>
             <li>DUBS</li>
             <li>SERIES</li>

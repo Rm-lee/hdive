@@ -1,5 +1,6 @@
 import React from "react";
 import { Button, Rating } from "semantic-ui-react";
+import MalLogo from '../assets/mal-logo-blue2.png'
 import "./seriesCardInfo.css";
 export default function SeriesInfo(props) {
 
@@ -28,10 +29,15 @@ timeFormat()
       {" "}
       <div className="details">
         <div className="info-overlay">
-          <span className="series-title">{props.content.Name}</span>
-          <span className="season">{props.content.SeasonName}</span>
+          <p className="series-title">{props.content.Name.toUpperCase()}</p>
+          <span className="season">{props.content.SeasonName.toUpperCase()}</span>
           <div className="ratings">
-              <Rating icon='star' size="massive" defaultRating={Math.round(props.content.OverallRating)} maxRating={5} />
+              <Rating icon='star' size="large" defaultRating={Math.round(props.content.OverallRating)} maxRating={5} />
+          <p style={{paddingLeft:"5px"}}>(Rating requires login)</p>
+          <img style={{height:"25px",margin:"0 10px",borderRadius:"2px"}} src={MalLogo} alt="mal logo"/>
+          <p>{props.content.MALScore} | </p>
+          <a href="target _blank" style={{color:"#0391C6",paddingLeft:"2px"}}>{" "} Score It</a>
+          
           </div>
           <div className="series-buttons">
             <Button

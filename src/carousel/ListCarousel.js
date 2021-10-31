@@ -11,7 +11,6 @@ function ListCarousel(props) {
   const seriesCatList = props.content.slice(0,15)
   const [seriesInfo,updateSeriesInfo] = useState()
   const [showInfor,setShowInfo]=useState(false)
-
   function NextArrow(props) {
 
     const { className, onClick } = props;
