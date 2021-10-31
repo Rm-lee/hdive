@@ -1,0 +1,32 @@
+.footer {
+  display: flex;
+  flex-wrap:wrap;
+  justify-content: center;
+  background: #28292b;
+  width: 95%;
+  max-width: 1140px;
+  margin: 0 auto ;
+  padding-bottom:20px;
+}
+.footer-nav-items {
+  display: flex;
+  flex-wrap:wrap;
+  justify-content: flex-start;
+  width:80%;
+}
+.footer-nav-items li {
+  list-style-type: none;
+  font-size: 0.8em;
+  padding: 0 5px;
+  color: white;
+  cursor: pointer;
+}
+.footer-icons{
+    display:flex;
+    width:200px;
+    align-items: center;
+    justify-content: space-around;
+    color:white;
+    font-size: 2rem;
+
+}

@@ -1,8 +1,13 @@
 import React from "react";
 import { Button, Rating } from "semantic-ui-react";
+import { useSelector} from "react-redux";
 import MalLogo from "../assets/mal-logo-blue2.png";
 import "./seriesCardInfo.css";
 export default function SeriesInfo(props) {
+  const chevron = useSelector((state) => state.list.chevron);
+  const showInfo = useSelector((state) => state.list.showInfo);
+  const list = useSelector((state) => state.list.list);
+
   const timeFormat = () => {
     let date = props.content.FirstPremiereDate.slice(0, 10);
     let hours = props.content.FirstPremiereDate.slice(11, 13);
@@ -16,7 +21,7 @@ export default function SeriesInfo(props) {
     <div className="details-container">
       <div
         style={
-          props.showInfo
+          showInfo &&  list === props.id&&chevron === props.content.Id 
             ? {
                 display: "flex",
               }
@@ -84,7 +89,7 @@ export default function SeriesInfo(props) {
       </div>
       <div
         style={
-          props.showInfo
+          showInfo&& list === props.id&&chevron === props.content.Id 
             ? {
                 display: "flex",
               }

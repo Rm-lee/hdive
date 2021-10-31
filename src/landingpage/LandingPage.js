@@ -79,6 +79,7 @@ function LandingPage() {
             slidesToShow={5}
             slidesToScroll={5}
           />
+         
         </div>
       ))}
     </div>

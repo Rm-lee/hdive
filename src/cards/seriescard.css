@@ -63,6 +63,12 @@
   border-radius: 2px;
   width: 100% !important;
 }
+
+.list-carousel div .slick-slide .list-carousel-img.active-card-img{
+  border:3px solid #00AEEF;
+
+}
+
 .list-carousel div .slick-slide .list-carousel-img .selected {
   border:2px solid #00AEEF;
 }
