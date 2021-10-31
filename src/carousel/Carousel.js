@@ -6,7 +6,7 @@ import "slick-carousel/slick/slick-theme.css";
 import "./carousel.css";
 function Carousel(props) {
   function NextArrow(props) {
-    const { className, style, onClick } = props;
+    const { className, onClick } = props;
     return (
       <div
         className={(className, "styled-next-arrow")}
@@ -18,7 +18,7 @@ function Carousel(props) {
     );
   }
   function PrevArrow(props) {
-    const { className, style, onClick } = props;
+    const { className, onClick } = props;
     return (
       <div
         className={(className, "styled-prev-arrow")}
@@ -43,7 +43,7 @@ function Carousel(props) {
     prevArrow: <PrevArrow />,
 
     appendDots: (dots) => (
-      <div style={{}}>
+      <div >
         <ul style={{ margin: " 0px", padding: "0" }}> {dots} </ul>
       </div>
     ),
@@ -54,9 +54,9 @@ function Carousel(props) {
     <div className="top-page-carousel">
       <Slider {...settings}>
 
-        {props.content.map((content) => (
+        {props.content.map((content,i) => (
      
-         <img src={content.KeyArtUrl} />
+         <img key={i}src={content.KeyArtUrl} alt="highlight reel" />
   
       ))}
       </Slider>

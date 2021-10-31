@@ -2,5 +2,10 @@
   text-align: center;
 }
 body{
-  background: url("./assets/HD_sitebackimage_5_poster3_compressed.jpg") 
+  background: url("./assets/HD_sitebackimage_5_poster3_compressed.jpg") ;
+
+}
+h1,h2,h3,h4,h5,h6,p,div,span{
+  font-family:'Libre Franklin', sans-serif;
+
 }

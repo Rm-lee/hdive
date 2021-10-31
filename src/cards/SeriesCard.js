@@ -1,11 +1,48 @@
-import React, { useState, useEffect } from "react";
-import SeriesInfo from "./SeriesInfo";
+import React, { useState} from "react";
+import { useSelector, useDispatch } from 'react-redux'
+import {setList,setChevron} from '../redux/slices/listSlice'
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import "./seriescard.css";
 
 export default function SeriesCard(props) {
   const { content } = props;
   const [hovered, setHovered] = useState(false);
+  const dispatch = useDispatch()
+  const list = useSelector((state) => state.list.list)
+  const chevron = useSelector((state) => state.list.chevron)
+
+const closeAllInfoSegments = () => {
+  if(document.querySelectorAll(".series-card-info")){
+  const detailsBottomButtons = document.querySelectorAll(".details-bottom-buttons")
+  const infoSegments = document.querySelectorAll(".series-card-info")
+  infoSegments.forEach(el => {
+    el.style.display = "none"
+  });
+  detailsBottomButtons.forEach(el => {
+    el.style.display = "none"
+  });
+}
+}
+const updateDetails = () => {
+  if(chevron === null){
+    props.setShowInfo(!props.showInfo);
+
+  }
+  dispatch(setChevron(content.Id))
+  dispatch(setList(props.id))
+  
+  if(chevron === content.Id){
+    props.setShowInfo(!props.showInfo);
+
+  }
+  else if(list !== null && list !== props.id){
+    closeAllInfoSegments()
+    props.setShowInfo(false);
+    props.setShowInfo(!props.showInfo)
+  }
+  props.updateSeriesInfo(content)
+}
+
 
  
   return (
@@ -25,8 +62,7 @@ export default function SeriesCard(props) {
               hovered ? "chevron-down chevron-slide-down" : "chevron-down"
             }
             onClick={()=>{
-              props.setShowInfo(!props.showInfo);
-              props.updateSeriesInfo(content)
+              updateDetails()
             }}
             icon="chevron-down"
           />

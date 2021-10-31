@@ -4,6 +4,7 @@
   width:98%;
   border-radius:2px;
   border:none;
+  margin:10px 0;
 }
 
 
@@ -54,6 +55,7 @@
   text-align: center;
   font-weight: bold;
   padding-bottom:10%;
+  
 }
 .list-carousel div .slick-slide .list-carousel-img {
   z-index: 2;
@@ -62,7 +64,7 @@
   width: 100% !important;
 }
 .list-carousel div .slick-slide .list-carousel-img .selected {
-  border:20px solid #00AEEF;
+  border:2px solid #00AEEF;
 }
 @keyframes chevronSlideDown {
   0% {
@@ -83,6 +85,10 @@
   .play-icon {
     font-size: 1rem;
   }
+  div .series-card{
+    height:65px;
+    margin:2px 0;
+  }
   @keyframes chevronSlideDown {
     0% {
       top: 20%;
@@ -92,7 +98,13 @@
     }
   }
 }
+@media only screen and (max-width: 850px) {
+  .series-card{
+    height:75px;
+    margin:20px 0;
+  }
 
+}
 @media only screen and (max-width: 900px) {
   .chevron-down {
     font-size: 1.5rem;

@@ -14,7 +14,7 @@ function ListCarousel(props) {
 
   function NextArrow(props) {
 
-    const { className, style, onClick } = props;
+    const { className, onClick } = props;
     return (
       <div
         className={(className, "styled-next-arrow")}
@@ -26,7 +26,7 @@ function ListCarousel(props) {
     );
   }
   function PrevArrow(props) {
-    const { className, style, onClick } = props;
+    const { className, onClick } = props;
     return (
       <div
         className={(className, "styled-prev-arrow")}
@@ -70,7 +70,7 @@ function ListCarousel(props) {
     <div className="list-carousel">
       <Slider {...settings}>
         {seriesCatList.map((content) => (
-          <SeriesCard  showInfo={showInfor} setShowInfo={setShowInfo}updateSeriesInfo={updateSeriesInfo}content={content} />
+          <SeriesCard key={content.id + 99} id={props.id} showInfo={showInfor} setShowInfo={setShowInfo}updateSeriesInfo={updateSeriesInfo}content={content} />
         ))}
       </Slider>
       {seriesInfo && 

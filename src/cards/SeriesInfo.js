@@ -2,7 +2,17 @@ import React from "react";
 import { Button, Rating } from "semantic-ui-react";
 import "./seriesCardInfo.css";
 export default function SeriesInfo(props) {
-  console.log(props);
+
+    const timeFormat = () => {
+
+       let date = props.content.FirstPremiereDate.slice(0,10)
+       let hours= props.content.FirstPremiereDate.slice(11,13)
+       let suffix = hours >= 12 ? "PM":"AM"; hours = ((hours + 11) % 12 + 1) + suffix
+
+       return date + " " + hours 
+        
+    }
+timeFormat()
   return (
       <div className="details-container">
     <div
@@ -21,7 +31,7 @@ export default function SeriesInfo(props) {
           <span className="series-title">{props.content.Name}</span>
           <span className="season">{props.content.SeasonName}</span>
           <div className="ratings">
-              <Rating icon='star' size="massive" defaultRating={props.content.OverallRating} maxRating={5} />
+              <Rating icon='star' size="massive" defaultRating={Math.round(props.content.OverallRating)} maxRating={5} />
           </div>
           <div className="series-buttons">
             <Button
@@ -39,13 +49,13 @@ export default function SeriesInfo(props) {
           </div>
 
           <p className="synopsis">{props.content.ShortSynopsis}</p>
-          <p className="premiere">Original Premiere: {props.content.FirstPremiereDate}</p>
+          <p className="premiere">Original Premiere: {timeFormat()}</p>
         </div>
       </div>
       <img
         className="series-img"
         src={props.content.MasterArtUrl}
-        alt="show image"
+        alt="series episode"
       />
     </div>
     <div style={

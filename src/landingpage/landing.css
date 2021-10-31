@@ -4,3 +4,20 @@
     max-width: 1140px;
     background-color: #222325;
 }
+.view-more{
+    color:#00AEEF;
+    font-size:1.5rem;
+    margin-left:30px;
+    display:flex;
+    align-items: center;
+}
+
+.view-more-text:hover{
+    color:#0091c5;
+    cursor:pointer;
+}
+.view-more:hover{
+    color:#0091c5;
+    cursor:pointer;
+
+}
